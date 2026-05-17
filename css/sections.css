@@ -1,0 +1,120 @@
+/* =========================
+   SKILLS
+========================= */
+
+.progress{
+
+    height:15px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.06);
+
+    overflow:hidden;
+}
+
+.progress-bar{
+
+    background:linear-gradient(
+    90deg,
+    var(--vibrant-purple),
+    var(--electric-blue)
+    );
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-card{
+    transition:.4s;
+}
+
+.contact-card:hover{
+    transform:translateY(-8px);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+
+    color:rgba(241,245,249,.7);
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    background:rgba(0,0,0,.22);
+}
+
+/* =========================
+   CONTACT ICONS
+========================= */
+
+.contact-icon{
+
+    min-width:58px;
+    height:58px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.contact-icon svg{
+
+    width:22px;
+    height:22px;
+
+    fill:white;
+}
+
+/* ICON BOX */
+
+.icon-box{
+
+    width:56px;
+    height:56px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    flex-shrink:0;
+
+    transition:.4s;
+}
+
+.icon-box svg{
+
+    width:22px;
+    height:22px;
+
+    fill:white;
+}
+/* =========================
+   ABOUT / FEATURES SPACING
+========================= */
+
+#about{
+    padding-bottom:20px;
+}
+
+.features-section{
+    padding-top:0;
+}

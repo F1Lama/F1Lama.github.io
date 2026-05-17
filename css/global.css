@@ -1,0 +1,194 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+/* =========================
+   ROOT COLORS
+========================= */
+
+:root{
+
+    --dark-navy: rgb(10, 15, 35);
+    --royal-purple: rgb(88, 28, 135);
+    --vibrant-purple: rgb(124, 58, 237);
+    --electric-blue: rgb(59, 130, 246);
+    --cyan: rgb(14, 165, 233);
+    --accent-glow: rgb(168, 85, 247);
+
+    --light-text: rgb(241, 245, 249);
+
+    --glass: rgba(255,255,255,.06);
+    --glass-border: rgba(255,255,255,.12);
+}
+
+/* =========================
+   BODY
+========================= */
+
+body{
+
+    font-family:'Inter', sans-serif;
+
+    background:
+    radial-gradient(circle at top left, rgba(124,58,237,.22), transparent 30%),
+    radial-gradient(circle at top right, rgba(59,130,246,.18), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(14,165,233,.15), transparent 25%),
+    radial-gradient(circle at bottom right, rgba(168,85,247,.16), transparent 30%),
+    var(--dark-navy);
+
+    color:var(--light-text);
+
+    overflow-x:hidden;
+
+    position:relative;
+}
+
+/* =========================
+   BACKGROUND GLOW
+========================= */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:600px;
+    height:600px;
+
+    top:-200px;
+    left:-200px;
+
+    background:rgba(124,58,237,.12);
+
+    filter:blur(140px);
+
+    z-index:-2;
+}
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:500px;
+    height:500px;
+
+    bottom:-180px;
+    right:-180px;
+
+    background:rgba(59,130,246,.12);
+
+    filter:blur(140px);
+
+    z-index:-2;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:var(--dark-navy);
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+    180deg,
+    var(--vibrant-purple),
+    var(--electric-blue)
+    );
+
+    border-radius:20px;
+}
+
+/* =========================
+   GLOBAL TAGS
+========================= */
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+section{
+    padding:110px 0;
+    position:relative;
+}
+
+a,
+a:visited,
+a:active{
+    color:inherit;
+    text-decoration:none;
+}
+
+/* =========================
+   TITLES
+========================= */
+
+h2{
+
+    position:relative;
+
+    display:block;
+
+    text-align:center;
+
+    padding-bottom:18px;
+
+    font-size:3.2rem;
+
+    margin-bottom:20px;
+
+    font-weight:700;
+
+    color:white;
+}
+
+h2::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    bottom:0;
+
+    transform:translateX(-50%);
+
+    width:90px;
+    height:4px;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+    90deg,
+    var(--vibrant-purple),
+    var(--electric-blue)
+    );
+}
+
+.section-text{
+
+    color:rgba(241,245,249,.68);
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.9;
+}
