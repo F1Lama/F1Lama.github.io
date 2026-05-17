@@ -49,9 +49,6 @@ img{
     display:block;
 }
 
-a{
-    text-decoration:none;
-}
 
 section{
     padding:110px 0;
@@ -743,4 +740,38 @@ section{
 a{
     text-decoration: none;
     color: inherit;
+}
+/* MOBILE NAVBAR FIX */
+
+@media(max-width:991px){
+
+    .navbar-collapse{
+
+        background:rgba(62,7,3,.96);
+
+        backdrop-filter:blur(18px);
+
+        padding:20px;
+
+        border-radius:20px;
+
+        margin-top:15px;
+
+        border:1px solid rgba(255,255,255,.08);
+    }
+
+    .navbar-nav{
+        align-items:center;
+    }
+
+    .nav-link{
+        padding:12px 0;
+    }
+
+}
+a,
+a:visited,
+a:active{
+    color:inherit;
+    text-decoration:none;
 }
