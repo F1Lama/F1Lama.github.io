@@ -130,3 +130,19 @@
 .project-item{
     transition:.4s ease;
 }
+/* =========================
+   CONTACT CARD FIX
+========================= */
+
+.contact-card{
+    overflow: visible;
+    word-break: break-word;
+        width:100%;
+
+}
+
+.contact-card p,
+.contact-card a{
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
