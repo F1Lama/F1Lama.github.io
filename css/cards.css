@@ -2,147 +2,243 @@
    CARDS
 ========================= */
 
-.card{
+.card {
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
 
-    background:rgba(255,255,255,.045);
+  border-radius: 30px;
+  position: relative;
 
-    border:1px solid rgba(255,255,255,.08);
+  color: var(--light-text);
+  overflow: hidden;
 
-    backdrop-filter:blur(18px);
+  height: 100%;
 
-    border-radius:30px;
-
-    color:var(--light-text);
-
-    overflow:hidden;
-
-    transition:.45s;
-
-    height:100%;
+  transition: all 0.4s ease;
+  will-change: transform;
 }
 
-.card:hover{
-
-    transform:translateY(-12px);
-
-    box-shadow:
-    0 18px 55px rgba(0,0,0,.35);
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.35);
 }
 
-.card-body{
-    padding:28px;
+/* CARD BACK LAYER */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    135deg,
+    rgba(124, 58, 237, 0.06),
+    rgba(59, 130, 246, 0.04)
+  );
+
+  opacity: 0;
+  transition: 0.4s ease;
 }
 
-.card-body h5{
-    color:white;
+.card:hover::before {
+  opacity: 1;
 }
 
-/* PROJECT IMAGE */
+/* IMAGE */
+.card img {
+  height: 240px;
+  object-fit: cover;
+  background: #111;
 
-.card img{
+  transition: transform 0.5s ease;
+}
 
-    height:240px;
+.card:hover img {
+  transform: scale(1.04);
+}
 
-    object-fit:cover;
+/* BODY */
+.card-body {
+  text-align: center;
+  padding: 24px 26px 32px;
+}
 
-    background:#111;
+.card-body h5 {
+  margin-bottom: 14px;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.card-body p {
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.8;
+  font-size: 0.95rem;
 }
 
 /* TECH TAGS */
-
-.tech{
-
-    gap:10px;
-
-    flex-wrap:wrap;
-
-    margin:25px 0;
+.tech {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 25px 0;
 }
 
-.tech p{
+.tech p {
+  padding: 8px 15px;
+  border-radius: 30px;
 
-    padding:8px 15px;
-
-    border-radius:30px;
-
-    background:rgba(255,255,255,.05);
-
-    border:1px solid rgba(255,255,255,.08);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
+
 /* =========================
    PROJECT FILTERS
 ========================= */
 
-.project-filters{
+.project-filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
 
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:12px;
-
-    flex-wrap:wrap;
-
-    margin-top:20px;
+  margin-top: 20px;
 }
 
-.filter-btn{
+.filter-btn {
+  padding: 10px 18px;
+  border-radius: 14px;
 
-    padding:10px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
 
-    border-radius:14px;
+  color: var(--light-text);
+  cursor: pointer;
 
-    border:1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(10px);
 
-    background:rgba(255,255,255,.05);
-
-    color:var(--light-text);
-
-    cursor:pointer;
-
-    transition:.35s;
-
-    backdrop-filter:blur(10px);
+  transition: all 0.35s ease;
 }
 
-.filter-btn:hover{
-
-    transform:translateY(-4px);
-
-    background:rgba(255,255,255,.08);
+.filter-btn:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.08);
 }
 
-.filter-btn.active{
-
-    background:linear-gradient(
+.filter-btn.active {
+  background: linear-gradient(
     135deg,
     var(--vibrant-purple),
     var(--electric-blue)
-    );
+  );
 
-    border-color:transparent;
+  border-color: transparent;
 }
 
-/* PROJECT ITEMS */
-
-.project-item{
-    transition:.4s ease;
-}
 /* =========================
-   CONTACT CARD FIX
+   FEATURE ICON
 ========================= */
 
-.contact-card{
-    overflow: visible;
-    word-break: break-word;
-        width:100%;
+.feature-icon {
+  width: 78px;
+  height: 78px;
 
+  margin: 30px auto 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 24px;
+
+  position: relative;
+
+  background: linear-gradient(
+    135deg,
+    rgba(124, 58, 237, 0.18),
+    rgba(59, 130, 246, 0.16)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(14px);
+
+  transition: all 0.4s ease;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
 }
 
+/* glow */
+.feature-icon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at top,
+    rgba(168, 85, 247, 0.25),
+    transparent 70%
+  );
+
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.feature-icon i {
+  font-size: 30px;
+  color: white;
+  transition: 0.4s ease;
+}
+
+/* hover */
+.card:hover .feature-icon {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 15px 35px rgba(124, 58, 237, 0.22);
+}
+
+.card:hover .feature-icon::before {
+  opacity: 1;
+}
+
+.card:hover .feature-icon i {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.35));
+}
+
+/* =========================
+   CONTACT FIX
+========================= */
+
+.contact-card {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
 .contact-card p,
-.contact-card a{
-    overflow-wrap: anywhere;
-    word-break: break-word;
+.contact-card a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skill-card i {
+  font-size: 22px;
+}
+
+.skill-card h5 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* HEADERS */
+#skills h2,
+#experience h2 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
 }

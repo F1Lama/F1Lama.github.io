@@ -1,81 +1,91 @@
 /* =========================
+   LARGE SCREENS → TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .hero {
+    text-align: center;
+  }
+
+  .hero-buttons,
+  .social-icons {
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 4.5rem;
+  }
+
+  /* mobile navbar dropdown */
+  .navbar-collapse {
+    background: rgba(10, 15, 35, 0.96);
+    backdrop-filter: blur(20px);
+
+    padding: 22px;
+    margin-top: 15px;
+
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    gap: 10px;
+  }
+}
+
+/* =========================
    TABLET
 ========================= */
 
-@media(max-width:992px){
+@media (max-width: 768px) {
+  .hero-image-wrapper {
+    width: 280px;
+    height: 280px;
+  }
 
-.hero h1{
-    font-size:4.2rem;
-}
+  .hero-image-wrapper::before {
+    width: 320px;
+    height: 320px;
+  }
 
-.navbar-nav{
-    padding-top:20px;
-    gap:10px;
-}
+  .hero h1 {
+    font-size: 3rem;
+  }
 
+  section {
+    padding: 90px 0;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .btn-primary-custom,
+  .btn-outline-custom {
+    width: 100%;
+    text-align: center;
+  }
+
+  .glass-section {
+    width: 92%;
+    padding: 70px 24px;
+
+    transform: translateY(0);
+
+    border-radius: 28px;
+  }
 }
 
 /* =========================
    MOBILE
 ========================= */
 
-@media(max-width:768px){
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2.4rem;
+  }
 
-.hero{
-    padding-top:160px;
-}
-
-.hero h1{
-    font-size:3.1rem;
-}
-
-h2{
-    font-size:2.3rem;
-}
-
-.btn-primary{
-    width:100%;
-}
-
-}
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media(max-width:480px){
-
-.hero h1{
-    font-size:2.5rem;
-}
-
-section{
-    padding:90px 0;
-}
-
-}
-
-/* =========================
-   MOBILE NAVBAR
-========================= */
-
-@media(max-width:991px){
-
-.navbar-collapse{
-
-    background:rgba(10,15,35,.96);
-
-    backdrop-filter:blur(20px);
-
-    padding:20px;
-
-    border-radius:22px;
-
-    margin-top:15px;
-}
-
-.navbar-nav{
-    align-items:center;
-}
-
+  h2 {
+    font-size: 1.8rem;
+  }
 }

@@ -2,119 +2,130 @@
    SKILLS
 ========================= */
 
-.progress{
-
-    height:15px;
-
-    border-radius:30px;
-
-    background:rgba(255,255,255,.06);
-
-    overflow:hidden;
+.skill-item {
+  margin-bottom: 28px;
 }
 
-.progress-bar{
+.skill-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
 
-    background:linear-gradient(
+.skill-info i {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.skill-info span {
+  color: white;
+  font-weight: 500;
+}
+
+.progress {
+  height: 15px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+.progress-bar {
+  transition: width 1.2s ease;
+  background: linear-gradient(
     90deg,
     var(--vibrant-purple),
     var(--electric-blue)
-    );
+  );
 }
 
 /* =========================
    CONTACT
 ========================= */
 
-.contact-card{
-    transition:.4s;
+.contact-card {
+  transition: 0.4s;
+  background: rgba(255, 255, 255, 0.045) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-.contact-card:hover{
-    transform:translateY(-8px);
+.contact-card:hover {
+  transform: translateY(-8px);
 }
 
-/* =========================
-   FOOTER
-========================= */
-
-.footer{
-
-    color:rgba(241,245,249,.7);
-
-    border-top:1px solid rgba(255,255,255,.08);
-
-    background:rgba(0,0,0,.22);
+.contact-card p,
+.contact-card a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 /* =========================
    CONTACT ICONS
 ========================= */
 
-.contact-icon{
-
-    min-width:58px;
-    height:58px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    border-radius:16px;
-
-    background:rgba(255,255,255,.05);
-
-    border:1px solid rgba(255,255,255,.08);
+.contact-icon {
+  min-width: 58px;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.contact-icon svg{
-
-    width:22px;
-    height:22px;
-
-    fill:white;
+.contact-icon i {
+  font-size: 22px;
+  color: white;
 }
 
 /* ICON BOX */
 
-.icon-box{
-
-    width:56px;
-    height:56px;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    border-radius:18px;
-
-    background:rgba(255,255,255,.05);
-
-    border:1px solid rgba(255,255,255,.08);
-
-    flex-shrink:0;
-
-    transition:.4s;
+.icon-box {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
+  transition: 0.4s;
 }
 
-.icon-box svg{
-
-    width:22px;
-    height:22px;
-
-    fill:white;
+.icon-box svg {
+  width: 22px;
+  height: 22px;
+  fill: white;
 }
+
 /* =========================
-   ABOUT / FEATURES SPACING
+   FOOTER
 ========================= */
 
-#about{
-    padding-bottom:20px;
+.footer {
+  color: rgba(241, 245, 249, 0.7);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.22);
 }
 
-.features-section{
-    padding-top:0;
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* =========================
+   LAYOUT FIXES
+========================= */
+
+#about {
+  padding-bottom: 20px;
+}
+
+.features-section {
+  padding-top: 0;
 }

@@ -2,87 +2,94 @@
    NAVBAR
 ========================= */
 
-.navbar{
+.navbar {
+  background: rgba(10, 15, 35, 0.58) ;
 
-    background:rgba(10,15,35,.58) !important;
+  backdrop-filter: blur(18px);
 
-    backdrop-filter:blur(18px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
-    border-bottom:1px solid rgba(255,255,255,.08);
+  padding: 18px 0;
 
-    padding:18px 0;
-
-    transition:.4s;
+transition: all 0.4s ease;
 }
 
-.navbar-nav{
-    gap:30px;
+.navbar-nav {
+  gap: 30px;
 }
 
-.nav-link{
+.nav-link {
+  color: var(--light-text) !important;
 
-    color:var(--light-text) !important;
+  font-weight: 500;
 
-    font-weight:500;
+  position: relative;
 
-    position:relative;
+  transition: 0.3s;
 
-    transition:.3s;
-
-    font-size:.95rem;
+  font-size: 0.95rem;
 }
 
-.nav-link:hover{
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
 
-    color:white !important;
-}
+  width: 0%;
+  height: 2px;
+  border-radius: 20px;
 
-.nav-link::after{
-
-    content:'';
-
-    position:absolute;
-
-    left:0;
-    bottom:-6px;
-
-    width:0%;
-    height:2px;
-
-    background:linear-gradient(
+  background: linear-gradient(
     90deg,
-    var(--accent-glow),
+    var(--vibrant-purple),
     var(--electric-blue)
-    );
+  );
 
-    transition:.4s;
+  transition: 0.4s;
+
+  box-shadow:
+    0 0 8px rgba(124, 58, 237, 0.8),
+    0 0 16px rgba(59, 130, 246, 0.6);
 }
 
-.nav-link:hover::after{
-    width:100%;
-}
+.nav-link:hover::after {
+  width: 100%;
 
+  box-shadow:
+    0 0 10px rgba(124, 58, 237, 0.9),
+    0 0 20px rgba(59, 130, 246, 0.8),
+    0 0 30px rgba(59, 130, 246, 0.5);
+}
+.nav-link:focus {
+  outline: none;
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.6);
+}
 /* TOGGLER */
 
-.navbar-toggler{
+.navbar-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
 
-    border:1px solid rgba(255,255,255,.15) !important;
+  background: rgba(255, 255, 255, 0.06) !important;
 
-    background:rgba(255,255,255,.06) !important;
+  backdrop-filter: blur(10px);
 
-    backdrop-filter:blur(10px);
+  padding: 8px 12px;
 
-    padding:8px 12px;
+  border-radius: 14px;
 
-    border-radius:14px;
-
-    box-shadow:none !important;
+  box-shadow: none !important;
 }
 
-.navbar-toggler:focus{
-    box-shadow:none !important;
+.navbar-toggler:focus {
+  box-shadow: none !important;
 }
 
-.navbar-toggler-icon{
-    filter:invert(1) brightness(200%);
+.navbar-toggler-icon {
+  filter: invert(1) brightness(200%);
+}
+
+.navbar-toggler:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
 }

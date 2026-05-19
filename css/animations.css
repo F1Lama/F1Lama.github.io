@@ -1,43 +1,70 @@
-/* =========================
-   FADE ANIMATION
-========================= */
 
-.fade-in{
-    animation:fade 1.2s ease;
+.fade-in {
+  opacity: 0;
+  animation: fade 1.2s ease forwards;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@keyframes fade{
+/* حركة الاضاءة */
 
-from{
-    opacity:0;
-    transform:translateY(40px);
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.7;
+    filter: blur(70px);
+  }
+
+  50% {
+    opacity: 1;
+    filter: blur(85px);
+  }
 }
 
-to{
-    opacity:1;
-    transform:translateY(0);
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-/* =========================
-   FLOAT ARROW
-========================= */
-
-.scroll-down{
-
-    animation:floatArrow 2s infinite;
+.left-anim {
+  animation: slideInLeft 0.8s ease-out forwards;
 }
 
-@keyframes floatArrow{
-
-0%,100%{
-    transform:translateY(0);
+.right-anim {
+  animation: slideInRight 0.8s ease-out forwards;
 }
 
-50%{
-    transform:translateY(10px);
+@media (prefers-reduced-motion: reduce) {
+  .fade-in,
+  .left-anim,
+  .right-anim {
+    animation: none !important;
+  }
 }
-
-}
-

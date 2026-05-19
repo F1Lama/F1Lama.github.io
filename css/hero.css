@@ -1,244 +1,317 @@
 /* =========================
-   HERO
+   HERO SECTION
 ========================= */
 
-.hero{
+/* HERO BADGE */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 
-    min-height:100vh;
+  padding: 8px 14px;
+  border-radius: 999px;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #fff;
 
-    text-align:center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 
-    overflow:hidden;
+  backdrop-filter: blur(12px);
 
-    padding:140px 20px 100px;
+  position: relative;
+  overflow: hidden;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+
+  transition: 0.3s ease;
 }
 
-.hero::before{
+.hero-badge::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
 
-    content:'';
+  background: #22c55e;
+  box-shadow: 0 0 10px #22c55e;
 
-    position:absolute;
-
-    width:520px;
-    height:520px;
-
-    top:-180px;
-    right:-120px;
-
-    border-radius:50%;
-
-    background:rgba(88,28,135,.12);
-
-    filter:blur(140px);
-
-    z-index:-1;
+  flex-shrink: 0;
 }
 
-.hero::after{
+.hero-badge::after {
+  content: "";
+  position: absolute;
+  inset: -50%;
 
-    content:'';
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
 
-    position:absolute;
-
-    width:450px;
-    height:450px;
-
-    bottom:-180px;
-    left:-140px;
-
-    border-radius:50%;
-
-    background:rgba(59,130,246,.08);
-
-    filter:blur(140px);
-
-    z-index:-1;
+  transform: translateX(-100%);
+  animation: shine 3s infinite;
 }
 
-/* TITLE */
-
-.hero h1{
-
-    font-size:5.5rem;
-
-    font-weight:800;
-
-    margin-bottom:20px;
-
-    line-height:1.05;
-
-    letter-spacing:-2px;
-
-    background:linear-gradient(
-    135deg,
-    rgb(255,255,255) 0%,
-    rgb(203,213,225) 35%,
-    rgb(167,139,250) 70%,
-    rgb(96,165,250) 100%
-    );
-
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
-/* TEXT */
-
-.hero p{
-
-    color:rgba(241,245,249,.62);
-
-    font-size:1.05rem;
-
-    line-height:1.9;
-
-    max-width:680px;
-
-    margin:auto;
+.hero-badge:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
-/* IMAGE */
-
-.hero img{
-
-    border-radius:32px;
-
-    border:1px solid rgba(255,255,255,.08);
-
-    background:rgba(255,255,255,.05);
-
-    backdrop-filter:blur(18px);
-
-    padding:10px;
-
-    transition:.45s;
-}
-
-.hero img:hover{
-    transform:translateY(-12px);
-}
-
-/* BUTTON */
-
-.btn-primary{
-
-    background:linear-gradient(
-    135deg,
-    rgb(99,102,241),
-    rgb(59,130,246)
-    );
-
-    border:none !important;
-
-    padding:14px 34px;
-
-    border-radius:18px;
-
-    color:white;
-
-    font-weight:600;
-
-    transition:.4s;
-}
-
-.btn-primary:hover{
-
-    transform:translateY(-6px);
-
-    box-shadow:
-    0 12px 30px rgba(99,102,241,.22);
-}
 /* =========================
-   SCROLL DOWN
+   SCROLL
 ========================= */
 
-.scroll-wrapper{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    margin-top:45px;
-
-    width:100%;
+.scroll-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
 }
 
-.scroll-down{
+.scroll-down {
+  color: rgba(168, 85, 247, 0.9);
+  animation: floatArrow 2s infinite;
+  transition: 0.4s;
+}
 
-    color:rgba(241,245,249,.7);
+.scroll-down:hover {
+  color: white;
+  transform: translateY(4px);
+  text-shadow: 0 0 18px rgba(168, 85, 247, 0.8);
+}
 
-    transition:.4s;
-
-    animation:floatArrow 2s infinite;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
+@keyframes floatArrow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
 }
 
 /* =========================
    HERO ICONS
 ========================= */
 
-.icons{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:20px;
-
-    margin-top:35px;
-
-    flex-wrap:wrap;
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+  flex-wrap: wrap;
 }
 
-.github{
+/* ICON CARD */
+.github {
+  width: 62px;
+  height: 62px;
 
-    width:60px;
-    height:60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    display:flex;
+  border-radius: 50%;
 
-    justify-content:center;
-    align-items:center;
+  background: linear-gradient(
+    135deg,
+    rgba(124, 58, 237, 0.14),
+    rgba(59, 130, 246, 0.12)
+  );
 
-    border-radius:20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 
-    background:rgba(255,255,255,.05);
+  backdrop-filter: blur(18px);
 
-    border:1px solid rgba(255,255,255,.08);
-
-    backdrop-filter:blur(18px);
-
-    transition:.4s;
-
-    cursor:pointer;
+  transition: 0.4s ease;
+  cursor: pointer;
+box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  position: relative;
 }
 
-.github svg{
+/* glow */
+.github::before {
+  content: "";
+  position: absolute;
+  inset: -20px;
 
-    width:22px;
-    height:22px;
+  background: radial-gradient(
+    circle,
+    rgba(168, 85, 247, 0.35),
+    transparent 70%
+  );
 
-    fill:white;
+  filter: blur(18px);
+  opacity: 0;
+  transition: 0.4s;
+  border-radius: 50%;
 }
 
-.github:hover{
+/* ICON */
+.github i {
+  font-size: 24px;
+  color: #fff;
+  transition: 0.4s;
+  filter: drop-shadow(0 0 6px rgba(168, 85, 247, 0.4));
+} /* HOVER */
+.github:hover {
+  transform: translateY(-8px) scale(1.06);
+  border-color: rgba(168, 85, 247, 0.35);
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.15);
+}
+.github:hover::before {
+  opacity: 1;
+}
+.github:hover i {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.35));
+}
 
-    transform:translateY(-8px);
+/* =========================
+   HERO
+========================= */
 
-    background:rgba(255,255,255,.1);
+.hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
 
-    box-shadow:
-    0 15px 35px rgba(124,58,237,.22);
+/* LEFT GLOW */
+.hero::before {
+  content: "";
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  top: -120px;
+  left: -120px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(124, 58, 237, 0.22),
+    transparent 70%
+  );
+
+  filter: blur(90px);
+  
+}
+
+/* RIGHT GLOW (FIXED) */
+.hero::after{
+
+    width:550px;
+    height:550px;
+
+    bottom:-260px;
+    right:-260px;
+
+    opacity:.7;
+}
+.hero::before,
+.hero::after {
+  z-index: -1;
+}
+
+/* HERO TITLE */
+.hero h1 {
+  font-size: 6.2rem;
+  font-weight: 800;
+  letter-spacing: -3px;
+  line-height: 1;
+
+  background: linear-gradient(135deg, #ffffff, #c8b4ff, #a070ff, #5aaaff);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 0 25px rgba(124, 58, 237, 0.18);
+}
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.hero-image-wrapper {
+  position: relative;
+  width: 380px;
+  height: 380px;
+
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* glow behind image */
+.hero-image-wrapper::before {
+  content: "";
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(124, 58, 237, 0.45),
+    rgba(59, 130, 246, 0.28),
+    transparent 70%
+  );
+
+  filter: blur(70px);
+  z-index: -1;
+
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+/* image */
+.hero-image-wrapper img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.12);
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+
+  box-shadow:
+    0 0 40px rgba(124, 58, 237, 0.35),
+    0 0 80px rgba(59, 130, 246, 0.25),
+    0 20px 60px rgba(0, 0, 0, 0.45);
+
+  transition: 0.4s ease;
+}
+
+.hero-image-wrapper img:hover {
+  transform: translateY(-10px) scale(1.03);
+
+  box-shadow:
+    0 0 55px rgba(124, 58, 237, 0.55),
+    0 0 100px rgba(59, 130, 246, 0.35),
+    0 25px 70px rgba(0, 0, 0, 0.5);
 }
