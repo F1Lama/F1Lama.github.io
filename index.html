@@ -5,24 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lama Portfolio</title>
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"     rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"   />
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"/>
+
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/hero.css" />
@@ -33,6 +24,7 @@
   </head>
 
   <body>
+
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
@@ -76,9 +68,10 @@
       <div class="container">
         <div class="row align-items-center g-5">
           <div class="col-lg-6 hero-content left-anim">
-            <span class="hero-badge">Available for work</span>
+            <span class="hero-badge mb-2">Available for work</span>
 
-            <h1>I’m Lama</h1>
+            <h1>Hi, I’m Lama</h1>
+         
 
             <h3>Full-Stack Web Developer</h3>
 
@@ -228,164 +221,279 @@
     <!-- SKILLS -->
     <section id="skills" class="glass-section">
       <div class="container fade-in">
-        <h2 class="text-center">Skills</h2>
+        <h2 class="text-center">Technical Skills</h2>
 
-        <div class="row g-4 mt-4">
-          <!-- HTML -->
-          <div class="col-md-6 col-lg-4">
+        <!-- FILTER -->
+        <div class="skills-filters text-center mb-4">
+          <button
+            class="filter-btn skill-btn active"
+            onclick="filterSkills('frontend', event)"
+          >
+            Frontend
+          </button>
+          <button
+            class="filter-btn skill-btn"
+            onclick="filterSkills('backend', event)"
+          >
+            Backend
+          </button>
+          <button
+            class="filter-btn skill-btn"
+            onclick="filterSkills('tools', event)"
+          >
+            Tools
+          </button>
+          <button
+            class="filter-btn skill-btn"
+            onclick="filterSkills('languages', event)"
+          >
+            Languages
+          </button>
+          <button
+            class="filter-btn skill-btn"
+            onclick="filterSkills('os', event)"
+          >
+            OS
+          </button>
+          <button
+            class="filter-btn skill-btn"
+            onclick="filterSkills('all', event)"
+          >
+            All
+          </button>
+        </div>
+
+        <!-- GRID -->
+        <div class="row g-4">
+          <!-- FRONTEND -->
+          <div class="col-md-6 col-lg-4 skill-item frontend">
             <div class="card skill-card p-4 h-100">
-              <div
-                class="d-flex justify-content-between align-items-center mb-3"
-              >
-                <div class="d-flex align-items-center gap-2">
-                  <i class="devicon-html5-plain colored"></i>
-                  <h5 class="mb-0">HTML</h5>
-                </div>
-
-                <span>95%</span>
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <i class="devicon-html5-plain colored"></i>
+                <h5>HTML</h5>
               </div>
-
               <div class="progress">
                 <div class="progress-bar" style="width: 95%"></div>
               </div>
             </div>
           </div>
 
-          <!-- CSS -->
-          <div class="col-md-6 col-lg-4">
+          <div class="col-md-6 col-lg-4 skill-item frontend">
             <div class="card skill-card p-4 h-100">
-              <div
-                class="d-flex justify-content-between align-items-center mb-3"
-              >
-                <div class="d-flex align-items-center gap-2">
-                  <i class="devicon-css3-plain colored"></i>
-                  <h5 class="mb-0">CSS</h5>
-                </div>
-
-                <span>90%</span>
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <i class="devicon-css3-plain colored"></i>
+                <h5>CSS</h5>
               </div>
-
-              <div class="progress">
-                <div class="progress-bar" style="width: 90%"></div>
-              </div>
-            </div>
-          </div>
-          <!-- Bootstrap -->
-          <div class="col-md-6 col-lg-4">
-            <div class="card skill-card p-4 h-100">
-              <div
-                class="d-flex justify-content-between align-items-center mb-3"
-              >
-                <div class="d-flex align-items-center gap-2">
-                  <i class="devicon-bootstrap-plain colored"></i>
-                  <h5 class="mb-0">Bootstrap</h5>
-                </div>
-
-                <span>85%</span>
-              </div>
-
-              <div class="progress">
-                <div class="progress-bar" style="width: 85%"></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- JavaScript -->
-          <div class="col-md-6 col-lg-4">
-            <div class="card skill-card p-4 h-100">
-              <div
-                class="d-flex justify-content-between align-items-center mb-3"
-              >
-                <div class="d-flex align-items-center gap-2">
-                  <i class="devicon-javascript-plain colored"></i>
-                  <h5 class="mb-0">JavaScript</h5>
-                </div>
-
-                <span>90%</span>
-              </div>
-
               <div class="progress">
                 <div class="progress-bar" style="width: 90%"></div>
               </div>
             </div>
           </div>
 
-          <!-- PHP -->
-          <div class="col-md-6 col-lg-4">
+          <div class="col-md-6 col-lg-4 skill-item frontend">
             <div class="card skill-card p-4 h-100">
-              <div
-                class="d-flex align-items-center justify-content-between mb-3"
-              >
-                <div class="d-flex align-items-center gap-2">
-                  <i class="devicon-php-plain colored"></i>
-                  <h5 class="mb-0">PHP</h5>
-                </div>
-
-                <span>80%</span>
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <i class="devicon-javascript-plain colored"></i>
+                <h5>JavaScript</h5>
               </div>
-
               <div class="progress">
-                <div class="progress-bar" style="width: 80%"></div>
+                <div class="progress-bar" style="width: 90%"></div>
               </div>
             </div>
           </div>
 
-          <!-- MySQL -->
-          <div class="col-md-6 col-lg-4">
+          <div class="col-md-6 col-lg-4 skill-item frontend">
             <div class="card skill-card p-4 h-100">
-              <div
-                class="d-flex align-items-center justify-content-between mb-3"
-              >
-                <div class="d-flex align-items-center gap-2">
-                  <i class="devicon-mysql-plain colored"></i>
-                  <h5 class="mb-0">MySQL</h5>
-                </div>
-
-                <span>80%</span>
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <i class="devicon-bootstrap-plain colored"></i>
+                <h5>Bootstrap</h5>
               </div>
-
-              <div class="progress">
-                <div class="progress-bar" style="width: 80%"></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Git -->
-          <div class="col-md-6 col-lg-4">
-            <div class="card skill-card p-4 h-100">
-              <div
-                class="d-flex justify-content-between align-items-center mb-3"
-              >
-                <div class="d-flex align-items-center gap-2">
-                  <i class="devicon-git-plain colored"></i>
-                  <h5 class="mb-0">Git</h5>
-                </div>
-
-                <span>85%</span>
-              </div>
-
               <div class="progress">
                 <div class="progress-bar" style="width: 85%"></div>
               </div>
             </div>
           </div>
 
-          <!-- GitHub -->
-          <div class="col-md-6 col-lg-4">
+          <!-- BACKEND -->
+          <div class="col-md-6 col-lg-4 skill-item backend">
             <div class="card skill-card p-4 h-100">
-              <div
-                class="d-flex justify-content-between align-items-center mb-3"
-              >
-                <div class="d-flex align-items-center gap-2">
-                  <i class="devicon-github-original colored"></i>
-                  <h5 class="mb-0">GitHub</h5>
-                </div>
-
-                <span>85%</span>
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <i class="devicon-php-plain colored"></i>
+                <h5>PHP</h5>
               </div>
+              <div class="progress">
+                <div class="progress-bar" style="width: 80%"></div>
+              </div>
+            </div>
+          </div>
 
+          <div class="col-md-6 col-lg-4 skill-item backend">
+            <div class="card skill-card p-4 h-100">
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <i class="devicon-mysql-plain colored"></i>
+                <h5>MySQL</h5>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" style="width: 80%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 skill-item backend">
+            <div class="card skill-card p-4 h-100">
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <i class="bi bi-fire"></i>
+                <h5>Firebase</h5>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" style="width: 75%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- LANGUAGES -->
+          <div class="col-md-6 col-lg-4 skill-item languages">
+            <div class="card skill-card p-4 h-100">
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <i class="bi bi-cpu"></i>
+                <h5>Java</h5>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" style="width: 80%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 skill-item languages">
+            <div class="card skill-card p-4 h-100">
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <i class="bi bi-cpu"></i>
+                <h5>Python</h5>
+              </div>
               <div class="progress">
                 <div class="progress-bar" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 skill-item languages">
+            <div class="card skill-card p-4 h-100">
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <i class="bi bi-cpu"></i>
+                <h5>Dart</h5>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" style="width: 75%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 skill-item languages">
+            <div class="card skill-card p-4 h-100">
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <i class="bi bi-cpu"></i>
+                <h5>C#</h5>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" style="width: 70%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 skill-item languages">
+            <div class="card skill-card p-4 h-100">
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <i class="bi bi-cpu"></i>
+                <h5>C++</h5>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" style="width: 70%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TOOLS -->
+          <div class="col-md-6 col-lg-4 skill-item tools">
+            <div class="card skill-card p-4 h-100">
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <i class="devicon-github-original colored"></i>
+                <h5>GitHub</h5>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 skill-item tools">
+            <div class="card skill-card p-4 h-100">
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <i class="bi bi-code-slash"></i>
+                <h5>VS Code</h5>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 skill-item tools">
+            <div class="card skill-card p-4 h-100">
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <i class="bi bi-terminal"></i>
+                <h5>NetBeans</h5>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" style="width: 75%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 skill-item tools">
+            <div class="card skill-card p-4 h-100">
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <i class="bi bi-shield-lock"></i>
+                <h5>Wireshark</h5>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" style="width: 70%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 skill-item tools">
+            <div class="card skill-card p-4 h-100">
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <i class="bi bi-database"></i>
+                <h5>phpMyAdmin</h5>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" style="width: 80%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- OS -->
+          <div class="col-md-6 col-lg-4 skill-item os">
+            <div class="card skill-card p-4 h-100">
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <i class="bi bi-windows"></i>
+                <h5>Windows</h5>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" style="width: 90%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 skill-item os">
+            <div class="card skill-card p-4 h-100">
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <i class="bi bi-terminal"></i>
+                <h5>Linux</h5>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" style="width: 80%"></div>
               </div>
             </div>
           </div>
@@ -406,49 +514,66 @@
 
         <!-- FILTER BUTTONS -->
         <div class="project-filters">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="fullstack">Full Stack</button>
-          <button class="filter-btn" data-filter="frontend">Frontend</button>
+          <button class="filter-btn project-btn active" data-filter="all">
+            All
+          </button>
+          <button class="filter-btn project-btn" data-filter="fullstack">
+            Full Stack
+          </button>
+          <button class="filter-btn project-btn" data-filter="frontend">
+            Frontend
+          </button>
           <!-- <button class="filter-btn" data-filter="backend">Backend</button> -->
         </div>
 
         <!-- PROJECTS GRID -->
         <div class="row g-4 mt-4">
           <!-- PROJECT 1 -->
-          <div class="col-md-6 col-lg-4 project-item fullstack">
+          <div class="col-md-6 col-lg-6 project-item fullstack">
             <div class="card h-100">
               <img
-                src="images/profile.png"
+                src="images/pharmacy-project.png"
                 class="card-img-top"
                 alt="project image"
               />
+
               <div class="card-body">
                 <h5>Pharmacy Inventory System</h5>
+
                 <p>
                   A comprehensive inventory management system with real-time
                   tracking.
                 </p>
-
+<!-- 
                 <div class="tech d-flex">
                   <p>PHP</p>
                   <p>MySQL</p>
                   <p>Bootstrap</p>
                   <p>JS</p>
-                </div>
+                   <p>HTML</p>
+                   <p>CSS</p>
+                </div> -->
 
                 <div class="hero-buttons d-flex gap-3 flex-wrap">
                   <a href="#" class="btn-primary-custom">Demo</a>
-                  <a href="#" class="btn-outline-custom">Code</a>
+
+                  <a
+                    href="https://github.com/F1Lama/pharmacy-inventory-system"
+                    target="_blank"
+                    class="btn-outline-custom"
+                  >
+                    Repository
+                  </a>
                 </div>
               </div>
             </div>
           </div>
 
           <!-- PROJECT 2 -->
-          <div class="col-md-6 col-lg-4 project-item fullstack">
+          <div class="col-md-6 col-lg-6 project-item fullstack">
             <div class="card h-100">
               <img
-                src="images/profile.png"
+                src="images/RegisterPage.png"
                 class="card-img-top"
                 alt="project image"
               />
@@ -458,51 +583,35 @@
                   Secure authentication system with role-based access control.
                 </p>
 
-                <div class="tech d-flex">
+                <!-- <div class="tech d-flex">
                   <p>PHP</p>
                   <p>MySQL</p>
-                  <p>API</p>
-                </div>
-
-                <div class="hero-buttons d-flex gap-3 flex-wrap">
-                  <a href="#" class="btn-primary-custom">Demo</a>
-                  <a href="#" class="btn-outline-custom">Code</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- PROJECT 3 -->
-          <div class="col-md-6 col-lg-4 project-item fullstack">
-            <div class="card h-100">
-              <img
-                src="images/profile.png"
-                class="card-img-top"
-                alt="project image"
-              />
-              <div class="card-body">
-                <h5>Hasadna Platform</h5>
-                <p>Modern agriculture platform with clean UI experience.</p>
-
-                <div class="tech d-flex">
                   <p>HTML</p>
-                  <p>CSS</p>
-                  <p>Bootstrap</p>
-                  <p>JS</p>
-                </div>
+                   <p>CSS</p>
+                </div> -->
 
                 <div class="hero-buttons d-flex gap-3 flex-wrap">
-                  <a href="#" class="btn-primary-custom">Demo</a>
-                  <a href="#" class="btn-outline-custom">Code</a>
+                  <!-- <a href="#" class="btn-primary-custom">Demo</a> -->
+                  <a
+                    href="https://github.com/F1Lama/Login-System"
+                    target="_blank"
+                    class="btn-outline-custom"
+                  >
+                    Code
+                  </a>
                 </div>
               </div>
             </div>
           </div>
-          <a href="#projects" class="view-all-btn">
-            View All Projects
 
-            <i class="bi bi-arrow-right"></i>
-          </a>
+          
+
+          <div class="text-center mt-4">
+  <a href="projects.html" class="btn btn-primary-custom">
+    View All Projects
+    <i class="bi bi-arrow-right"></i>
+  </a>
+</div>
         </div>
         <div class="scroll-wrapper">
           <a href="#experience" class="scroll-down">
@@ -517,42 +626,145 @@
       <div class="container fade-in">
         <h2 class="text-center">Education & Training</h2>
         <p class="text-center section-text mb-5">
-          My academic journey and professional development.
+          My academic journey, training, and continuous learning.
         </p>
 
         <div class="row g-4">
+          <!-- EDUCATION -->
           <div class="col-md-6">
             <div class="card h-100">
-              <div class="card-header">
+              <!-- header (icon left + date right) -->
+              <div
+                class="card-header d-flex justify-content-between align-items-center"
+              >
                 <i class="bi bi-mortarboard"></i>
+                <span class="text-white">2020 - 2025</span>
               </div>
+
               <div class="card-body">
                 <h5>Computer Science Graduate</h5>
-                <p>2020 - 2025 | Taibah University</p>
-                <p>
-                  Graduated with honors in Computer Science, specializing in
-                  software engineering and web development.
-                </p>
+                <p>Taibah University</p>
+                <p>Graduated with honors in Computer Science.</p>
+                <a
+                  href="files/graduation.pdf"
+                  target="_blank"
+                  class="btn btn-outline-custom mt-3"
+                >
+                  View Certificate
+                </a>
               </div>
             </div>
           </div>
 
+          <!-- BOOTCAMP -->
           <div class="col-md-6">
             <div class="card h-100">
-              <div class="card-header">
-                <i class="bi bi-code"></i>
+              <div
+                class="card-header d-flex justify-content-between align-items-center"
+              >
+                <i class="bi bi-code-slash"></i>
+                <span class="text-white">2026</span>
               </div>
+
               <div class="card-body">
                 <h5>Web Development Bootcamp</h5>
-                <p>2026 | فضاء اجا</p>
-                <p>
-                  Intensive full-stack web development program covering modern
-                  frameworks and deployment.
-                </p>
+                <p>Aja Space Information Technology</p>
+                <p>Full-stack development with hands-on projects.</p>
+
+                <a
+                  href="files/fullstack recommendation.jpeg"
+                  target="_blank"
+                  class="btn btn-outline-custom mt-3"
+                >
+                  View Certificate
+                </a>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- COURSES -->
+<h3 class="text-center mt-5 mb-4">Courses</h3>
+
+<div class="row g-4">
+
+  <!-- COURSE 1 -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100">
+
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <i class="bi bi-journal-code"></i>
+        <span class="text-white">IBM SkillsBuild</span>
+      </div>
+
+      <div class="card-body">
+        <h5>Use Generative AI for Software Development</h5>
+        <!-- <p>HTML, CSS, JavaScript fundamentals and projects.</p> -->
+
+        <a href="#" class="btn btn-outline-custom mt-3" target="_blank">
+          View Certificate
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- COURSE 2 -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100">
+
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <i class="bi bi-journal-code"></i>
+        <span class="text-white">Coursera</span>
+      </div>
+
+      <div class="card-body">
+        <h5>Data Collection and Processing with Python</h5>
+<p> an online non-credit course authorized by University of Michigan and offered through
+Coursera</p>
+        <a href="#" class="btn btn-outline-custom mt-3" target="_blank">
+          View Certificate
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- COURSE 3 -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100">
+
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <i class="bi bi-journal-code"></i>
+        <span class="text-white">Coursera</span>
+      </div>
+
+      <div class="card-body">
+        <h5>Introduction to Data Science in Python</h5>
+<p> an online non-credit course authorized by University of Michigan and offered through
+Coursera</p>
+        <a href="#" class="btn btn-outline-custom mt-3" target="_blank">
+          View Certificate
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+
+    </div>
+  </div>
+<div class="text-center mt-4">
+  <a href="courses.html" class="btn btn-primary-custom">
+    View All Courses
+    <i class="bi bi-arrow-right"></i>
+  </a>
+</div>
+</div>
+
+        </div>
+
+        <!-- SCROLL -->
         <div class="scroll-wrapper">
           <a href="#contact" class="scroll-down">
             <i class="bi bi-chevron-down"></i>
@@ -649,5 +861,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="main.js"></script>
+    
   </body>
 </html>

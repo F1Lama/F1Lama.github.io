@@ -1,27 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
+
   /* =========================
      PROJECT FILTER
   ========================= */
 
-  const buttons = document.querySelectorAll(".filter-btn");
+  const projectButtons = document.querySelectorAll(".project-btn");
   const projects = document.querySelectorAll(".project-item");
 
-  buttons.forEach((btn) => {
+  projectButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
-      buttons.forEach((b) => b.classList.remove("active"));
+
+      projectButtons.forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
 
       const filter = btn.dataset.filter;
 
       projects.forEach((project) => {
-        if (filter === "all") {
+        if (filter === "all" || project.classList.contains(filter)) {
           project.style.display = "block";
         } else {
-          project.style.display = project.classList.contains(filter)
-            ? "block"
-            : "none";
+          project.style.display = "none";
         }
       });
+
     });
   });
 
@@ -39,4 +40,31 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  /* =========================
+     SKILLS FILTER
+  ========================= */
+
+  const items = document.querySelectorAll('.skill-item');
+  const buttons = document.querySelectorAll('.skill-btn');
+
+  function filterSkills(category, clickedBtn = null) {
+
+    items.forEach(item => {
+      if (category === 'all' || item.classList.contains(category)) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+
+    buttons.forEach(btn => btn.classList.remove('active'));
+    if (clickedBtn) clickedBtn.classList.add('active');
+  }
+
+  window.filterSkills = filterSkills;
+
+  //  default state
+  filterSkills('frontend');
+
 });

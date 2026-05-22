@@ -22,7 +22,9 @@
   --accent-glow: rgb(168, 85, 247);
   --light-text: rgb(241, 245, 249);
 }
-
+html {
+  scroll-behavior: smooth;
+}
 /* =========================
    BODY
 ========================= */
@@ -248,4 +250,8 @@ h2::after {
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, rgba(124, 58, 237, 0.9), rgba(59, 130, 246, 0.9));
   border-radius: 20px;
+}
+.btn-outline-custom {
+  position: relative;
+  z-index: 10;
 }
