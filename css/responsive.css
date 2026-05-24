@@ -111,4 +111,7 @@
     font-size: 0.8rem;
     margin-bottom: 0;
   }
+    .glass-section {
+    background: rgba(10, 10, 20, 0.9);
+  }
 }
