@@ -36,6 +36,11 @@
     <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/responsive.css" />
 </head>
+<style>
+  body {
+  padding-top: 75px;
+}
+</style>
 <body>
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg fixed-top">
@@ -76,67 +81,56 @@
     </nav>
 
         <!-- PROJECTS -->
-    <section id="projects" class="glass-section">
+    <section id="projects" class="glass-section ">
       <div class="container text-center fade-in">
         <h2 class="text-center">Featured Projects</h2>
         <p class="section-text">A selection of my recent personal projects.</p>
 
-        <!-- FILTER BUTTONS -->
-        <div class="project-filters">
-          <button class="filter-btn project-btn active" data-filter="all">
-            All
-          </button>
-          <button class="filter-btn project-btn" data-filter="fullstack">
-            Full Stack
-          </button>
-          <button class="filter-btn project-btn" data-filter="frontend">
-            Frontend
-          </button>
-          <!-- <button class="filter-btn" data-filter="backend">Backend</button> -->
-        </div>
+      
 
         <!-- PROJECTS GRID -->
         <div class="row g-4 mt-4">
           <!-- PROJECT 1 -->
-          <div class="col-md-6 col-lg-6 project-item fullstack">
-            <div class="card h-100">
-              <img
-                src="images/pharmacy-project.png"
-                class="card-img-top"
-                alt="project image"
-              />
+         <div class="col-md-6 col-lg-6 project-item fullstack">
+  <div class="card h-100">
 
-              <div class="card-body">
-                <h5>Pharmacy Inventory System</h5>
+    <img
+      src="images/pharmacy-project.png"
+      class="card-img-top"
+      alt="project image"
+    />
 
-                <p>
-                  A comprehensive inventory management system with real-time
-                  tracking.
-                </p>
-<!-- 
-                <div class="tech d-flex">
-                  <p>PHP</p>
-                  <p>MySQL</p>
-                  <p>Bootstrap</p>
-                  <p>JS</p>
-                   <p>HTML</p>
-                   <p>CSS</p>
-                </div> -->
+    <div class="card-body">
 
-                <div class="hero-buttons d-flex gap-3 flex-wrap">
-                  <a href="#" class="btn-primary-custom">Demo</a>
+      <div class="project-content">
 
-                  <a
-                    href="https://github.com/F1Lama/pharmacy-inventory-system"
-                    target="_blank"
-                    class="btn-outline-custom"
-                  >
-                    Repository
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+        <h5 class="project-title">Pharmacy Inventory System</h5>
+
+        <p class="project-desc">
+         A full-stack web application for managing pharmacy inventory with role-based access, real-time stock tracking, and expiry monitoring.
+        </p>
+
+        <div class="project-tags justify-content-center">
+  <span>PHP</span>
+  <span>MySQL</span>
+  <span>Bootstrap</span>
+  <span>JavaScript</span>
+</div>
+
+        <div class="project-buttons justify-content-center">
+          <a href="#" class="btn-primary-custom">Watch Demo</a>
+
+          <a href="https://github.com/F1Lama/pharmacy-inventory-system" target="_blank" class="btn-outline-custom">
+            Source Code
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
 
           <!-- PROJECT 2 -->
           <div class="col-md-6 col-lg-6 project-item fullstack">
@@ -147,28 +141,25 @@
                 alt="project image"
               />
               <div class="card-body">
-                <h5>Login Authentication System</h5>
-                <p>
-                  Secure authentication system with role-based access control.
-                </p>
+              <h5 class="project-title">Secure Login System</h5>
 
-                <!-- <div class="tech d-flex">
-                  <p>PHP</p>
-                  <p>MySQL</p>
-                  <p>HTML</p>
-                   <p>CSS</p>
-                </div> -->
+<p class="project-desc">
+A secure full-stack authentication system built with PHP and MySQL, featuring login, registration, and session-based access control.
+</p>
 
-                <div class="hero-buttons d-flex gap-3 flex-wrap">
-                  <!-- <a href="#" class="btn-primary-custom">Demo</a> -->
-                  <a
-                    href="https://github.com/F1Lama/Login-System"
-                    target="_blank"
-                    class="btn-outline-custom"
-                  >
-                    Code
-                  </a>
-                </div>
+<div class="project-tags justify-content-center">
+  <span>PHP</span>
+  <span>MySQL</span>
+  <span>Authentication</span>
+</div>
+
+               <div class="project-buttons justify-content-center">
+          <a href="#" class="btn-primary-custom">Watch Demo</a>
+
+         <a href="https://github.com/F1Lama/Login-System" target="_blank" class="btn-outline-custom">
+            Source Code
+          </a>
+        </div>
               </div>
             </div>
           </div>
@@ -182,22 +173,26 @@
                 alt="project image"
               />
               <div class="card-body">
-                <h5>ToDo List Web Application </h5>
-                <p> simple full-stack ToDo List web application that allows users to register, log in, and manage their personal tasks. Each user has their own private task list.</p>
+                <h5 class="project-title">ToDo List Application</h5>
 
-                <!-- <div class="tech d-flex">
-                  <p>HTML</p>
-                  <p>CSS</p>
-                  <p>Bootstrap</p>
-                  <p>JS</p>
-                  <p>MySQL</p>
-                  <p>PHP</p>
-                </div> -->
+<p class="project-desc">
+A task management system with authentication and real-time updates using AJAX for smooth user experience.
+</p>
 
-                <div class="hero-buttons d-flex gap-3 flex-wrap">
-                  <a href="#" class="btn-primary-custom">Demo</a>
-                  <a href="#" class="btn-outline-custom">Code</a>
-                </div>
+<div class="project-tags  justify-content-center">
+  <span>PHP</span>
+  <span>MySQL</span>
+  <span>AJAX</span>
+  <span>JavaScript</span>
+</div>
+
+                 <div class="project-buttons justify-content-center">
+          <a href="#" class="btn-primary-custom">Watch Demo</a>
+
+         <a href="https://github.com/F1Lama/toDoListProject" target="_blank" class="btn-outline-custom">
+            Source Code
+          </a>
+        </div>
               </div>
             </div>
           </div>
@@ -211,22 +206,25 @@
                 alt="project image"
               />
               <div class="card-body">
-                <h5>Notes Web Application </h5>
-                <p> This project allows users to manage personal notes with full CRUD operations (Create, Read, Update, Delete) using PHP and MySQL.</p>
+             <h5 class="project-title">Notes Management System</h5>
 
-                <!-- <div class="tech d-flex">
-                  <p>HTML</p>
-                  <p>CSS</p>
-                  <p>Bootstrap</p>
-                  <p>JS</p>
-                  <p>MySQL</p>
-                  <p>PHP</p>
-                </div> -->
+<p class="project-desc">
+A full-stack app for managing personal notes with secure login and full CRUD operations.
+</p>
 
-                <div class="hero-buttons d-flex gap-3 flex-wrap">
-                  <a href="#" class="btn-primary-custom">Demo</a>
-                  <a href="#" class="btn-outline-custom">Code</a>
-                </div>
+<div class="project-tags  justify-content-center">
+  <span>PHP</span>
+  <span>MySQL</span>
+  <span>CRUD</span>
+</div>
+
+                 <div class="project-buttons justify-content-center">
+          <a href="#" class="btn-primary-custom">Watch Demo</a>
+
+         <a href="https://github.com/F1Lama/notes_app" target="_blank" class="btn-outline-custom">
+            Source Code
+          </a>
+        </div>
               </div>
             </div>
           </div>

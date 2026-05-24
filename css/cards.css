@@ -167,7 +167,41 @@
   border-radius: 24px !important;
 
 }
+.project-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-top: 10px;
+  color: #fff;
+}
 
+.project-desc {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 10px 0 15px;
+  line-height: 1.6;
+}
+
+.project-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.project-tags span {
+  font-size: 0.75rem;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  backdrop-filter: blur(10px);
+}
+
+.project-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 /* =========================
    FEATURE ICON
 ========================= */
@@ -277,3 +311,76 @@
 }
 
 /*  */
+/* CARD */
+.skill-category-card {
+  padding: 22px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+}
+
+/* HEADER */
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.category-header i {
+  font-size: 1.3rem;
+  color: #a855f7;
+}
+
+/* VERTICAL LIST */
+.skills-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+
+/* FULLSTACK BADGE */
+.badge-skill {
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: rgba(139,92,246,0.2);
+  border: 1px solid rgba(139,92,246,0.3);
+  font-size: 0.85rem;
+}
+.skills-vertical div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 6px 10px;
+  border-radius: 10px;
+
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.06);
+
+  font-size: 0.9rem;
+}
+
+.skills-vertical i {
+  font-size: 1rem;
+}
+#skills .row {
+  justify-content: center;
+}
+.inner-skill-card {
+  padding: 18px;
+  border-radius: 14px;
+
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+
+  transition: 0.3s ease;
+}
+
+.inner-skill-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(139, 92, 246, 0.4);
+}

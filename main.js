@@ -45,26 +45,26 @@ document.addEventListener("DOMContentLoaded", () => {
      SKILLS FILTER
   ========================= */
 
-  const items = document.querySelectorAll('.skill-item');
-  const buttons = document.querySelectorAll('.skill-btn');
+  const items = document.querySelectorAll(".skill-item");
+  const buttons = document.querySelectorAll(".filter-btn");
 
   function filterSkills(category, clickedBtn = null) {
 
     items.forEach(item => {
-      if (category === 'all' || item.classList.contains(category)) {
-        item.style.display = 'block';
+      if (category === "all" || item.classList.contains(category)) {
+        item.style.display = "block";
       } else {
-        item.style.display = 'none';
+        item.style.display = "none";
       }
     });
 
-    buttons.forEach(btn => btn.classList.remove('active'));
-    if (clickedBtn) clickedBtn.classList.add('active');
+    buttons.forEach(btn => btn.classList.remove("active"));
+    if (clickedBtn) clickedBtn.classList.add("active");
   }
 
   window.filterSkills = filterSkills;
 
-  //  default state
-  filterSkills('frontend');
+  // default state
+  filterSkills("Development");
 
 });
