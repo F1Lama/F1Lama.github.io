@@ -150,6 +150,11 @@
 #projects .container {
   max-width: 1400px;
 }
+.project-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
 #projects .card {
   padding: 1.2rem;
@@ -198,8 +203,10 @@
 }
 
 .project-buttons {
+  margin-top: auto;
   display: flex;
-  gap: 10px;
+  justify-content: center;
+  gap: 12px;
   flex-wrap: wrap;
 }
 /* =========================

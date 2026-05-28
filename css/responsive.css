@@ -114,4 +114,8 @@
     .glass-section {
     background: rgba(10, 10, 20, 0.9);
   }
+  .skills-filters button {
+  position: relative;
+  z-index: 20;
+}
 }
