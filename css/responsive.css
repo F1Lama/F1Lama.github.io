@@ -66,7 +66,6 @@
   }
 
 }
-
 /* =========================
    MOBILE
 ========================= */
@@ -92,15 +91,16 @@
     font-size: 20px;
   }
 
+  /* CARD FIX (الأهم) */
   .card {
     padding: 14px;
 
     background: #141414 !important;
-
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
 
-    border: 1px solid rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.08) !important;
+    box-shadow: none !important;
   }
 
   .card h5 {
@@ -112,22 +112,16 @@
     margin-bottom: 0;
   }
 
+  /* GLASS SECTION FIX */
   .glass-section {
-
     background: #0f0f0f !important;
-
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
-
-    border: 1px solid rgba(255,255,255,0.06);
-
-    box-shadow: none;
+    box-shadow: none !important;
   }
 
   .navbar-collapse {
-
     background: #111 !important;
-
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
   }
@@ -137,7 +131,7 @@
     z-index: 20;
   }
 
-
+  /* ABOUT FIX */
   #about .card {
     width: 100%;
     min-width: 100%;
@@ -157,23 +151,20 @@
     flex: 0 0 100%;
     max-width: 100%;
   }
-    #projects .glass-section,
-  #experience .glass-section {
 
-    background: #0f0f0f !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    box-shadow: none !important;
-  }
-
+  /* PROJECTS + EXPERIENCE FIX (CORRECT) */
   #projects .card,
   #experience .card {
-
     background: #141414 !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
 
-    border: 1px solid rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.08) !important;
+    box-shadow: none !important;
   }
 
+  #projects .glass-section,
+  #experience .glass-section {
+    background: #0f0f0f !important;
+  }
 }
