@@ -35,45 +35,36 @@
    TABLET
 ========================= */
 
+/* =========================
+   MOBILE FIXES
+========================= */
+
 @media (max-width: 768px) {
-  .hero-image-wrapper {
-    width: 280px;
-    height: 280px;
+
+  .glass-section,
+  .card,
+  .navbar-collapse {
+
+    background: #111 !important;
+
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+
+    box-shadow: none !important;
+
+    border: 1px solid rgba(255,255,255,0.06);
   }
 
-  .hero-image-wrapper::before {
-    width: 320px;
-    height: 320px;
+  .card-header {
+    background: transparent !important;
   }
 
-  .hero h1 {
-    font-size: 3rem;
+  .card::before,
+  .glass-section::before,
+  .glass-section::after {
+    display: none !important;
   }
 
-  section {
-    padding: 90px 0;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .btn-primary-custom,
-  .btn-outline-custom {
-    width: 100%;
-    text-align: center;
-  }
-
-  .glass-section {
-    width: 92%;
-    padding: 70px 24px;
-
-    transform: translateY(0);
-
-    border-radius: 28px;
-  }
 }
 
 /* =========================
@@ -146,4 +137,24 @@
     z-index: 20;
   }
 
+
+  #about .card {
+    width: 100%;
+    min-width: 100%;
+    padding: 16px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  #about .card p,
+  #about .card h5 {
+    white-space: normal;
+    word-break: normal;
+    text-align: center;
+  }
+
+  #about .row > div {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }

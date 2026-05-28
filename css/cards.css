@@ -398,3 +398,8 @@
   font-size: 0.95rem;
   line-height: 1.6;
 }
+
+#about .card {
+  min-height: 160px;
+  padding: 18px;
+}
