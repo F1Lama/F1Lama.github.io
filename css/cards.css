@@ -391,3 +391,10 @@
   transform: translateY(-4px);
   border-color: rgba(139, 92, 246, 0.4);
 }
+
+.course-desc{
+  min-height: 70px;
+  color: #cfcfcf;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
